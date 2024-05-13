@@ -1,0 +1,393 @@
+* {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho y alto del elemento */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente predeterminada para el cuerpo del documento */
+}
+
+
+header {
+  display: flex;
+  /* Color de fondo oscuro */
+  color: black; /* Color de texto blanco */
+  justify-content: space-between;
+  margin-top: 5%;
+
+}
+#app{
+  
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logoImg img{
+  width: 20px;
+  height: 20px;
+  display: flex;
+
+}
+
+/* Estilos para el logo */
+#logo {
+  width: 50px; /* Ancho del logo */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+#imgElementos{
+ 
+  display: flex;
+  width: 20%;
+  height: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+#imgElementos :hover{
+
+  border-radius:100%;
+  background-color: #ccc;
+  cursor:pointer;
+}
+.elementos{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+}
+
+
+/* Estilos para el menú de navegación */
+#menu {
+  list-style-type: none;
+  display: flex;
+  place-content: flex-end space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.liMenu {
+  display: flex; 
+  width: 30%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer; 
+}
+.active{
+  display: flex;
+  border: solid;
+  border-radius: 4rem;
+  border-color: #0c0d0e;
+  /* margin-right: 10px; */
+  color: white;
+  background-color: black;
+  width: 30%;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+   
+
+#menu li:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+
+/* Estilos para el cuerpo principal */
+main {
+
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+  /* Añade relleno alrededor del contenido */
+  #gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #gallery li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+    gap: 20px;
+}
+  
+#gallery li img{
+ 
+  display: flex;
+  max-width: 250px;
+  flex-wrap: wrap;
+  margin:10px;
+  padding:10px;
+  margin-top:50px;
+  border-radius: 40px;
+}
+#gallery li:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  
+
+}
+
+
+/* Estilos para la galería de imágenes */
+#gallery {
+  list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+
+
+#gallery li:last-child {
+  margin-right: 0; /* Elimina el margen derecho de la última imagen */
+}
+
+/* Estilos para el formulario de búsqueda */
+#busqueda {
+  
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.divInput{
+  display: flex;
+  border: none;
+  width: 80%;
+  height: 60%;
+ 
+
+}
+.divInput>button{
+  display:block;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius:3rem; 
+  border: none;
+ 
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  text-decoration:solid;
+ 
+}
+
+#cajaBusqueda {
+  width: 100%; /* Ancho del campo de búsqueda */
+  padding:10px; /* Añade relleno alrededor del campo de búsqueda */
+  vertical-align: middle;
+  border:none;
+  background-color: whitesmoke;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+
+#searchContainer {
+  /*display: none;
+  position: absolute;*/
+left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+z-index: 1;
+position: relative;
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+cursor: pointer;
+margin-top: 20px;
+justify-content: center;
+align-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+/* Estilos adicionales para los botones de búsqueda */
+#searchContainer button {
+  display: block; 
+  width: 50%;
+  padding: 2px; 
+  background-color: #f0f0f0; 
+  border: none; 
+  cursor: pointer;
+  border-radius: 2rem;
+
+
+}
+#searchContainer button:hover{
+color: rgba(237, 20, 20, 0.879);
+}
+/* Estilos para el botón de búsqueda */
+#busqueda button {
+  display: flex;
+  cursor:pointer;
+}
+/* Estilo para ocultar el contenedor cuando tiene la clase 'hidden' */
+#searchContainer.hidden {
+  display: none; /* Oculta el contenedor */
+}
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: small;
+  margin-top: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+#piePag {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#piePag >li:hover{
+  cursor:pointer;
+  color:red
+}
+#botonBuscar:hover{
+  background-color: #aaa5a5;
+}
+
+@media screen and (max-width: 900px){
+/* Estilos para el menú desplegable */
+.opciones{
+  display:none;
+}
+.visible{
+  display:block;
+  
+}
+
+.liMenu{
+  width: 80px;
+ 
+}
+#menu {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 30%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.divInput {
+  display: flex;
+  border: none;
+  min-width: 4rem;
+  height: 60%;
+}
+#searchContainer {
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+}
+
+@media screen and (max-width:700px) {
+  #busqueda button{
+    display: none;
+  }
+  #cajaBusqueda {
+    display: flex;
+    border-radius: 3rem;}
+
+    #imgElementos {
+      display: flex;
+      width: 20%;
+      height: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap:2px;
+   
+  }
+  #searchContainer{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:400px) {
+  #cajaBusqueda {
+    display: flex;
+    border-radius: 3rem;
+   
+  }
+
+  #imgElementos {
+    display: flex;
+    width: 80%;
+    height: 60px;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    .elementos {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;}
+
+header {
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+#menu {
+  display: flex;
+  
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#busqueda {
+  margin-top: 5%;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+}
